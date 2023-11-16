@@ -73,12 +73,12 @@ def dividir(n1, n2):
 
 
 
-# Para que a EXIBIÇAO dos números aconteça sem casas decimais quando for int ou com duas casas decimais quando for float
+# Para que a EXIBIÇAO dos números aconteça sem casas decimais quando for int ou com casas decimais quando for float
 def formatar_numero(num):
     if ( num % 1 == 0 ):
         num_formatado = f"{num:.0f}"
     else:
-        num_formatado = f"{num:.2f}"
+        num_formatado = f"{num}"
     return num_formatado
 
 
