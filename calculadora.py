@@ -82,5 +82,5 @@ def formatar_numero(num):
     return num_formatado
 
 
-# --- cahamada para execução do programa ----
+# --- chamada para execução do programa ----
 executar()
