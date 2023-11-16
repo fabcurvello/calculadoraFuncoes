@@ -32,17 +32,41 @@ def operacao():
         print("--- OPÇÃO INVÁLIDA ---")
 
 
-def valores (op):
+def valores(op):
     n1 = float(input("Informe o primeiro valor: "))
     n2 = float(input("Informe o segundo valor: "))
     print("--- RESULTADO ---")
     if ( op == soma ):
         somar(n1, n2)
+    elif ( op == sub ):
+        subtrair(n1, n2)
+    elif ( op == mult ):
+        multiplicar(n1, n2)
+    else:
+        dividir(n1, n2)
 
 
 def somar(n1, n2):
-    soma = n1 + n2
-    print(f"\n{n1} + {n2} = {soma}\n")
+    calc = n1 + n2
+    print(f"\n{n1} + {n2} = {calc}\n")
+    # todo formatar saída de dados parta não exibir decimal caso não existe
+
+
+def subtrair(n1, n2):
+    calc = n1 - n2
+    print(f"\n{n1} - {n2} = {calc}\n")
+    # todo formatar saída de dados parta não exibir decimal caso não existe
+
+
+def multiplicar(n1, n2):
+    calc = n1 * n2
+    print(f"\n{n1} x {n2} = {calc}\n")
+    # todo formatar saída de dados parta não exibir decimal caso não existe
+
+
+def dividir(n1, n2):
+    calc = n1 / n2
+    print(f"\n{n1} / {n2} = {calc}\n")
     # todo formatar saída de dados parta não exibir decimal caso não existe
 
 
