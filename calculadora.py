@@ -3,6 +3,9 @@ sub = "b"
 mult = "c"
 div = "d"
 
+
+# Laço que mantém o programa em execução enquanto o usuário responder s;
+# Se for a primeira rodada, não questiona o usuário sobre realizar novo cálculo.
 def continuar():
     primeira_rodada = True
     while ( True ):
@@ -18,6 +21,8 @@ def continuar():
             break
 
 
+# Exibe menu e pergunta a operação matemática desejada;
+# Se a operação escolhida for válida, chama a função valores.
 def operacao():
     print("---- C A L C U L A D O R A ----")
     print("---- Operações Matemáticas ----")
@@ -32,6 +37,7 @@ def operacao():
         print("--- OPÇÃO INVÁLIDA ---")
 
 
+# Pergunta os valores e chama a função da operação matemática passando os valores
 def valores(op):
     n1 = float(input("Informe o primeiro valor: "))
     n2 = float(input("Informe o segundo valor: "))
@@ -48,27 +54,33 @@ def valores(op):
 
 def somar(n1, n2):
     calc = n1 + n2
-    print(f"\n{n1} + {n2} = {calc}\n")
-    # todo formatar saída de dados parta não exibir decimal caso não existe
+    print(f"\n{formatar_numero(n1)} + {formatar_numero(n2)} = {formatar_numero(calc)}\n")
 
 
 def subtrair(n1, n2):
     calc = n1 - n2
-    print(f"\n{n1} - {n2} = {calc}\n")
-    # todo formatar saída de dados parta não exibir decimal caso não existe
+    print(f"\n{formatar_numero(n1)} - {formatar_numero(n2)} = {formatar_numero(calc)}\n")
 
 
 def multiplicar(n1, n2):
     calc = n1 * n2
-    print(f"\n{n1} x {n2} = {calc}\n")
-    # todo formatar saída de dados parta não exibir decimal caso não existe
+    print(f"\n{formatar_numero(n1)} x {formatar_numero(n2)} = {formatar_numero(calc)}\n")
 
 
 def dividir(n1, n2):
     calc = n1 / n2
-    print(f"\n{n1} / {n2} = {calc}\n")
-    # todo formatar saída de dados parta não exibir decimal caso não existe
+    print(f"\n{formatar_numero(n1)} / {formatar_numero(n2)} = {formatar_numero(calc)}\n")
 
 
-# --- execução ----
+
+# Para que a EXIBIÇAO dos números aconteça sem casas decimais quando for int ou com duas casas decimais quando for float
+def formatar_numero(num):
+    if ( num % 1 == 0 ):
+        num_formatado = f"{num:.0f}"
+    else:
+        num_formatado = f"{num:.2f}"
+    return num_formatado
+
+
+# --- execução do programa ----
 continuar()
