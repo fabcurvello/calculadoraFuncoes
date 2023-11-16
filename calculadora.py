@@ -6,7 +6,7 @@ div = "d"
 
 # Laço que mantém o programa em execução enquanto o usuário responder s;
 # Se for a primeira rodada, não questiona o usuário sobre realizar novo cálculo.
-def continuar():
+def executar():
     primeira_rodada = True
     while ( True ):
         if (primeira_rodada):
@@ -82,5 +82,5 @@ def formatar_numero(num):
     return num_formatado
 
 
-# --- execução do programa ----
-continuar()
+# --- cahamada para execução do programa ----
+executar()
